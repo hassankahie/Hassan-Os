@@ -1,0 +1,123 @@
+:root {
+    font-family: Arial, sans-serif;
+
+    --background: #f4f6fa;
+    --surface: #ffffff;
+    --text: #202938;
+    --muted: #788395;
+    --primary: #4f6df5;
+    --border: #e5e9f0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    background: var(--background);
+    color: var(--text);
+    transition: 0.25s;
+}
+
+body.dark {
+    --background: #111827;
+    --surface: #1f2937;
+    --text: #f9fafb;
+    --muted: #9ca3af;
+    --border: #374151;
+}
+
+.sidebar {
+    width: 250px;
+    background: var(--surface);
+    border-right: 1px solid var(--border);
+    padding: 30px 20px;
+}
+
+.sidebar h2 {
+    color: var(--primary);
+    margin-bottom: 40px;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+nav a {
+    color: var(--muted);
+    text-decoration: none;
+    padding: 13px;
+    border-radius: 8px;
+}
+
+nav a:hover,
+nav a.active {
+    color: var(--primary);
+    background: var(--background);
+}
+
+.main-content {
+    flex: 1;
+    padding: 35px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header p,
+.welcome p,
+.card p {
+    color: var(--muted);
+    margin-top: 8px;
+}
+
+button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    background: var(--primary);
+    color: white;
+    cursor: pointer;
+}
+
+.welcome {
+    background: var(--surface);
+    padding: 30px;
+    margin-top: 30px;
+    border-radius: 14px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.card {
+    background: var(--surface);
+    padding: 25px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+}
+
+.card strong {
+    display: block;
+    margin-top: 25px;
+    color: var(--primary);
+}
+
+footer {
+    margin-top: 40px;
+    color: var(--muted);
+    font-size: 13px;
+}

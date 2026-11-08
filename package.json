@@ -1,0 +1,12 @@
+{
+  "name": "hassan-os",
+  "version": "1.0.0",
+  "description": "Hassan's Personal Operating System",
+  "main": "src/main/main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^YOUR_INSTALLED_VERSION"
+  }
+}
